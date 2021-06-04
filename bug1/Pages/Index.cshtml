@@ -1,0 +1,11 @@
+﻿@*@page "{handler?}" *@
+@*@page "{id?}"*@
+@page "{xxx?}"
+
+@model New_folder.Pages.IndexModel
+
+<form asp-page="Index">
+    <button asp-page-handler="Handler1">Set TempData</button>
+    <button asp-page-handler="Handler2">Read TempData</button>
+</form>
+

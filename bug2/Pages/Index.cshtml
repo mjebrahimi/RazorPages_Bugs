@@ -1,0 +1,7 @@
+﻿@*@page "{pageNum:int?}"*@
+@page
+@model New_folder.Pages.IndexModel
+
+<a asp-page="/Index" asp-route-pageNum="1">Link1</a>
+<br />
+<a href="@Url.Page("/Index", new { pageNum = "1" })">Link2</a>
