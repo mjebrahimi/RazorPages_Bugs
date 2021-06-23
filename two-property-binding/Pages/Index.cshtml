@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .validation-summary-errors {
+        color: red;
+    }
+
+    .input-validation-error {
+        border: 1px solid red;
+    }
+</style>
+
+<div asp-validation-summary="All"></div>
+
+<div>
+    <h1>Create</h1>
+    <form asp-page="/Index" asp-page-handler="Create" method="post">
+        <input type="text" asp-for="PersonCreate.FirstName" placeholder="First Name" />
+        <input type="text" asp-for="PersonCreate.LastName" placeholder="Last Name" />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
+
+<div>
+    <h1>Update</h1>
+    <form asp-page="/Index" asp-page-handler="Update" method="post">
+        <input type="text" asp-for="PersonUpdate.FirstName" placeholder="First Name" />
+        <input type="text" asp-for="PersonUpdate.LastName" placeholder="Last Name" />
+        <input type="submit" value="Submit" />
+    </form>
+</div>
